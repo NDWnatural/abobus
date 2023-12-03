@@ -9,6 +9,10 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(cors({ origin: 'https://ndwnatural.github.io' }));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://ndwnatural.github.io");
+  next();
+});
 
 app.post('/download', async (req, res) => {
   try {
