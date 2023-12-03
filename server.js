@@ -11,7 +11,6 @@ app.use((req, res, next) => {
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(cors({ origin: 'https://ndwnatural.github.io' }));
 
 app.post('/download', async (req, res) => {
   try {
