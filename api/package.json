@@ -1,0 +1,14 @@
+{
+  "name": "abobus",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "ytdl-core": "^5.10.0",
+    "cors": "^2.8.5"  // Adicione esta linha
+  }
+}
