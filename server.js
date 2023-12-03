@@ -1,18 +1,17 @@
-const express = require('express');
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
 const cors = require('cors');
-
-const app = express();
 const port = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
-app.use(cors({ origin: 'https://ndwnatural.github.io' }));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://ndwnatural.github.io');
   next();
 });
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.use(cors({ origin: 'https://ndwnatural.github.io' }));
 
 app.post('/download', async (req, res) => {
   try {
