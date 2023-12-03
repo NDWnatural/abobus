@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
+const cors = require('cors'); // Adicionado
+
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(cors()); // Adicionado
 
 app.post('/download', async (req, res) => {
   try {
