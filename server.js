@@ -8,7 +8,12 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(cors()); // Adicionado
+app.use(cors({
+  origin: 'https://ndwnatural.github.io/pagdownload/', // Troque para sua origem permitida
+  methods: 'POST',
+  allowedHeaders: 'Content-Type',
+}));
+ // Adicionado
 
 app.post('/download', async (req, res) => {
   try {
