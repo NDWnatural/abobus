@@ -6,9 +6,10 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://ndwnatural.github.io/pagdownload');
+  res.header('Access-Control-Allow-Origin', 'https://ndwnatural.github.io');
   next();
 });
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
@@ -28,7 +29,7 @@ app.post('/download', async (req, res) => {
 });
 
 HTTP/1.1 200 OK
-Access-Control-Allow-Origin: "https://ndwnatural.github.io/pagdownload/"
+Access-Control-Allow-Origin: "https://ndwnatural.github.io/pagdownload"
 Access-Control-Allow-Credentials: true
 
 app.listen(port, () => {
