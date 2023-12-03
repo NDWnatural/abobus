@@ -1,4 +1,6 @@
-async headers() {
+module.exports = {
+  trailingSlash: false,
+  async headers() {
     return [
       {
         // matching all API routes
@@ -11,4 +13,8 @@ async headers() {
         ],
       },
     ];
+  },
+  async redirects() {
+    return [];
   }
+};
