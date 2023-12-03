@@ -10,5 +10,8 @@
     "body-parser": "^1.19.0",
     "ytdl-core": "^5.10.0",
     "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "yarn": "^1.22.15"
   }
 }
