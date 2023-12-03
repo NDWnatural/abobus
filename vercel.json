@@ -1,7 +1,7 @@
 {
     "functions": {
       "api/download.js": {
-        "runtime": "nodejs18x"
+        "runtime": "vercel-node@18.0.0"
       }
     }
   }
