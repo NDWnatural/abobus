@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://ndwnatural.github.io');
+  res.header('Access-Control-Allow-Origin', 'https://ndwnatural.github.io/pagdownload');
   next();
 });
 app.use(bodyParser.urlencoded({ extended: true }));
