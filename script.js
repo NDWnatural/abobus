@@ -7,7 +7,7 @@ function download() {
         return;
     }
 
-    fetch(`${apiUrl}`, {
+    fetch(`${apiUrl}/download`, {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',
