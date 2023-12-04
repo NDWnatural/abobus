@@ -5,8 +5,9 @@ const cors = require('micro-cors')();
 
 const handler = async (req, res) => {
   const { pathname, query } = parse(req.url, true);
-  
-  if (pathname === '/download') {
+
+  // Permitir solicitações POST para a rota /download
+  if (req.method === 'POST' && pathname === '/download') {
     try {
       const { videoUrl } = query;
 
