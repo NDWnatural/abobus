@@ -6,6 +6,11 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.all('/', (req, res, next) => {
+  res.header('Access-Control-Allow-Methods', 'GET, POST');
+  next();
+});
+
 
 app.post('/', async (req, res) => {
   try {
