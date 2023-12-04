@@ -1,27 +1,42 @@
-// api/download.js
 const { send } = require('micro');
 const { parse } = require('url');
-const { createServer } = require('http');
+const ytdl = require('ytdl-core');
 const cors = require('micro-cors')();
 
 const handler = async (req, res) => {
   const { pathname, query } = parse(req.url, true);
+  
   if (pathname === '/download') {
-    // Lógica de download aqui
-    send(res, 200, 'Download pronto!');
+    try {
+      const { videoUrl } = query;
+
+      // Verificar se a URL do vídeo foi fornecida
+      if (!videoUrl) {
+        throw new Error('URL do vídeo não fornecida.');
+      }
+
+      // Validar a URL do vídeo usando ytdl-core
+      if (!ytdl.validateURL(videoUrl)) {
+        throw new Error('URL do vídeo inválida.');
+      }
+
+      // Obter informações sobre o vídeo
+      const info = await ytdl.getInfo(videoUrl);
+
+      // Escolher o formato de áudio desejado
+      const audioFormat = ytdl.chooseFormat(info.formats, { quality: 'highestaudio' });
+
+      // Iniciar o streaming do áudio como resposta
+      ytdl(videoUrl, { format: audioFormat })
+        .pipe(res);
+
+    } catch (error) {
+      console.error('Erro ao processar o download:', error);
+      send(res, 500, 'Erro ao processar o download');
+    }
   } else {
     send(res, 404, 'Rota não encontrada');
   }
 };
 
-export const runtime = 'nodejs';
-
-export default function handler(request, response) {
-  return response.status(200).json({ text: 'I am a Serverless Function!' });
-}
-
-const server = createServer(cors(handler));
-
-server.listen(process.env.PORT || 3000, () => {
-  console.log('Servidor Vercel Function rodando!');
-});
+module.exports = cors(handler);
