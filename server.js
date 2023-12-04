@@ -1,11 +1,15 @@
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
-const cors = require('cors');
 const express = require('express');
 const app = express();
 
 // Configuração do CORS para todas as rotas
-app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use(bodyParser.json());
 
