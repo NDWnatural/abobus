@@ -7,18 +7,26 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f4f4f4;
-  }
-  
-  .container {
+}
+
+.container {
     text-align: center;
-  }
-  
-  input {
+    padding: 20px; /* Adicionando espaçamento interno */
+}
+
+input {
     padding: 8px;
-  }
-  
-  button {
+}
+
+button {
     padding: 10px;
     cursor: pointer;
-  }
-  
+    background-color: #3498db; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+button:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+}
