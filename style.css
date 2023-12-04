@@ -1,7 +1,7 @@
 #textone{
     text-align: center;
 }
-body {
+container {
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,11 +10,9 @@ body {
     height: 100vh;
     font-family: normal, Arial, sans-serif;
     color: #5e1a29;
-    }
-}
-.container {
     text-align: center;
     padding: 20px; /* Adicionando espaçamento interno */
+    }
 }
 input {
     padding: 8px;
