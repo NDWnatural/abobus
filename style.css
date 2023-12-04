@@ -25,7 +25,7 @@ input {
 }
 
 button {
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     background-color: #ff809c; /* Cor de fundo */
     color: #1f1f1f; /* Cor do texto */
@@ -40,5 +40,5 @@ button {
 
 button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
-    padding: 12px;
+    padding: 10px;
 }
