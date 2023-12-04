@@ -1,7 +1,5 @@
 #textone{
     text-align: center;
-    font-family: normal, Arial, sans-serif;
-    color: #ff809c;
 }
 body {
     margin: 0;
@@ -37,4 +35,5 @@ button {
 
 button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
+    padding: 15px;
 }
