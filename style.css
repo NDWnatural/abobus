@@ -46,7 +46,12 @@ button:hover {
 }
 #l{
     padding: 6px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 6px;
+    border-color: #ffffff;
 }
 #l:hover {
     padding: 8px;
+    
 }
