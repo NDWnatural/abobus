@@ -32,6 +32,8 @@ button {
     border: none;
     transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
     transition: padding 0.3s ease;
+    border-width: 2px;
+    border-style: solid;
 }
 
 button:hover {
