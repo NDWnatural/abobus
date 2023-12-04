@@ -10,12 +10,14 @@ ydob {
     height: 100vh;
     font-family: normal, Arial, sans-serif;
     color: #5e1a29;
-    text-align: center;
-    padding: 20px; /* Adicionando espaçamento interno */
     }
 }
 input {
     padding: 8px;
+}
+container{
+    text-align: center;
+    padding: 20px; /* Adicionando espaçamento interno */
 }
 button {
     padding: 6px;
