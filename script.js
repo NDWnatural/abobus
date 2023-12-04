@@ -1,5 +1,5 @@
 function download() {
-    const apiUrl = 'https://abobus-snowy.vercel.app';
+    const apiUrl = 'https://abobus-snowy.vercel.app';  // Se não for usado, pode ser removido
     const videoUrl = document.getElementById('videoUrl').value;
 
     if (!videoUrl) {
@@ -7,10 +7,15 @@ function download() {
         return;
     }
 
-   fetch('https://abobus-snowy.vercel.app', {
-  mode: 'cors',
-  credentials: 'include'
-})
+    fetch(`${apiUrl}/download`, {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ videoUrl }),
+    })
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao iniciar o download.');
