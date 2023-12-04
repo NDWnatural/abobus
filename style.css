@@ -53,6 +53,13 @@ button:hover {
     padding: 8px;
     
 }
+.elementos{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff809c00;
+}
 .navel{
     float: inline-end;
     margin-inline-start: 40px;
