@@ -29,7 +29,7 @@ app.post('/download', async (req, res) => {
 });
 
 HTTP/1.1 200 OK
-Access-Control-Allow-Origin: "https://abobus-g5rqgtqrl-rhinges-projects.vercel.app"
+Access-Control-Allow-Origin: "https://abobus-snowy.vercel.app/"
 Access-Control-Allow-Credentials: true
 
 app.listen(port, () => {
