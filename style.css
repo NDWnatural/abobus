@@ -41,4 +41,5 @@ button {
 button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
     padding: 8px;
+    border-color: #bd576d;
 }
