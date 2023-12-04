@@ -7,18 +7,10 @@ function download() {
         return;
     }
 
-    fetch(apiUrl, {
-        method: 'POST',
-        mode: 'cors',
-        credentials: 'include',
-        headers: {
-            'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
-            'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
-        },
-        body: `videoUrl=${encodeURIComponent(videoUrl)}`
-    })
+   fetch('https://abobus-snowy.vercel.app', {
+  mode: 'cors',
+  credentials: 'include'
+})
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao iniciar o download.');
