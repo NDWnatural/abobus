@@ -38,9 +38,3 @@ button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
     padding: 12px;
 }
-#videoURL{
-    padding: 10px;
-}
-#videoURL: hover{
-    padding: 12px;
-}
