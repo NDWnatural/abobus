@@ -4,31 +4,22 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     font-family: normal, Arial, sans-serif;
     color: #5e1a29;
     }
 }
-
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 20px; /* Adicionando espaçamento interno */
 }
-
 input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 8px;
 }
-
 button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 6px;
     cursor: pointer;
     background-color: #ff809c; /* Cor de fundo */
@@ -42,16 +33,12 @@ button {
     border-radius: 6px;
     border-color: #ff809c;
 }
-
 button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
     padding: 8px;
     border-color: #bd576d;
 }
 #l{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 6px;
     border-style: solid;
     border-width: 5px;
@@ -60,7 +47,7 @@ button:hover {
 }
 #l:hover {
     padding: 8px;
-    
+
 }
 .elementos{
     list-style-type: none;
@@ -86,7 +73,6 @@ button:hover {
     align-items: center;
     transition: 0.6s;
 }
-
 .navel a:hover{
     color: rgb(255, 128, 156);
     font-size: 14px
