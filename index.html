@@ -8,9 +8,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>Seu Site</h1>
-    <input type="text" id="videoUrl" placeholder="Insira a URL do vídeo">
-    <button onclick="download()">Download</button>
+    <header>
+      <h1>Seu Site</h1>
+    </header>
+    <main>
+      <label for="videoUrl">URL do Vídeo:</label>
+      <input type="text" id="videoUrl" placeholder="Insira a URL do vídeo">
+      <button type="button" onclick="download()">Download</button>
+    </main>
   </div>
 
   <script src="script.js"></script>
