@@ -5,17 +5,17 @@ const port = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(bodyParser.json());
 
 app.post('/download', async (req, res) => {
   try {
     const videoUrl = req.body.videoUrl;
+
+    if (!ytdl.validateURL(videoUrl)) {
+      return res.status(400).send('URL do vídeo inválida.');
+    }
+
     const info = await ytdl.getInfo(videoUrl);
     const audioFormat = ytdl.chooseFormat(info.formats, { quality: 'highestaudio' });
 
@@ -27,10 +27,6 @@ app.post('/download', async (req, res) => {
     res.status(500).send('Erro ao processar o download.');
   }
 });
-
-HTTP/1.1 200 OK
-Access-Control-Allow-Origin: "https://abobus-snowy.vercel.app/"
-Access-Control-Allow-Credentials: true
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
