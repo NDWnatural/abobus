@@ -53,6 +53,7 @@ button:hover {
 .elementos{
     list-style-type: none;
     margin: 0;
+    margin-bottom: 0;
     padding: 0;
     overflow: hidden;
     background-color: #ff809c00;
