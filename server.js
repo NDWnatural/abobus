@@ -1,9 +1,15 @@
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
-const cors = require('cors');
+const cors = require('micro-cors')();
 const express = require('express');
 const app = express();
 
+app.use(cors({
+  origin: '*', // ou a origem específica do seu cliente
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+}));
 app.use(cors());
 app.use(bodyParser.json());
 app.all('/', (req, res, next) => {
