@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/download', async (req, res) => {
+app.post('/download.js', async (req, res) => {
   try {
     const videoUrl = req.body.videoUrl;
 
