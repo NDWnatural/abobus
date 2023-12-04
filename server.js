@@ -1,22 +1,13 @@
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
-const cors = require('micro-cors')();
+const cors = require('cors');
 const express = require('express');
 const app = express();
 
-app.use(cors({
-  origin: '*', // ou a origem específica do seu cliente
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-}));
+// Configuração do CORS para todas as rotas
 app.use(cors());
-app.use(bodyParser.json());
-app.all('/', (req, res, next) => {
-  res.header('Access-Control-Allow-Methods', 'GET, POST');
-  next();
-});
 
+app.use(bodyParser.json());
 
 app.post('/', async (req, res) => {
   try {
