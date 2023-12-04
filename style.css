@@ -31,9 +31,10 @@ button {
     color: #1f1f1f; /* Cor do texto */
     border: none;
     transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    transition: padding 0.3s ease;
 }
 
 button:hover {
     background-color: #bd576d; /* Cor de fundo ao passar o mouse */
-    padding: 15px;
+    padding: 12px;
 }
