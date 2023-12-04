@@ -7,14 +7,11 @@ function download() {
         return;
     }
 
-    fetch(`${apiUrl}/download?url=${videoUrl}`, {
-        method: 'POST', // Alterado para POST
-        mode: 'cors',
-        credentials: 'include',
+    fetch(apiUrl, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        // Enviando a URL do vídeo no corpo da requisição como JSON
         body: JSON.stringify({ videoUrl }),
     })
     .then(response => {
