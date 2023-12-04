@@ -1,19 +1,22 @@
 const bodyParser = require('body-parser');
 const ytdl = require('ytdl-core');
 const cors = require('cors');
-const port = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/download.js', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     const videoUrl = req.body.videoUrl;
 
+    if (!videoUrl) {
+      throw new Error('URL do vídeo não fornecida.');
+    }
+
     if (!ytdl.validateURL(videoUrl)) {
-      return res.status(400).send('URL do vídeo inválida.');
+      throw new Error('URL do vídeo inválida.');
     }
 
     const info = await ytdl.getInfo(videoUrl);
@@ -28,6 +31,7 @@ app.post('/download.js', async (req, res) => {
   }
 });
 
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
