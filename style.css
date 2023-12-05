@@ -161,7 +161,6 @@ button:hover {
     color: #5e1a29;
     font-size: 14px
 }
-/*finalizado*/
 #textone{
     text-align: center;
 }
@@ -172,7 +171,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     font-family: normal, Arial, sans-serif;
     color: #5e1a29;
     }
