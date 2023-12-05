@@ -57,7 +57,7 @@
             border: none;
             color: var(--color-white);
             cursor: pointer;
-            display: none;
+            display: block;
         }
         @media screen and (max-width: 768px) {
             .navigation_header{
