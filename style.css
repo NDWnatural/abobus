@@ -93,7 +93,6 @@ container{
 button {
     padding: 6px;
     cursor: pointer;
-    background-color: #ff809c; /* Cor de fundo */
     color: #1f1f1f; /* Cor do texto */
     border: none;
     transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
