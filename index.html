@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>PageDowload</title>
-  <style>
-      :root{
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo | GN</title>
+    <style>
+        :root{
             --color-white: #fff;
             --color-dark1: #272727;
             --color-dark2: #2d2d2d;
@@ -21,8 +21,7 @@
         }
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #c46378;
-            background-image: linear-gradient(45deg,rgb(255, 128, 155) rgb(161, 79, 97) 35%, rgb(0, 0, 0) 100%);
+            background-color: var(--color-dark1);
             color: var(--color-white);
         }
         .img_logo_header{
@@ -33,6 +32,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            font-size:  12px;
         }
         .header{
             background-color: var(--color-dark2);
@@ -46,6 +46,7 @@
             z-index: 2;
         }
         .content{
+            color: var(--color-pink);
             padding-top: 5em;
             text-align: center;
             height: 100vh;
@@ -110,19 +111,29 @@
             <a href="https://ndwnatural.github.io/teste2/">PESQUISA</a>
         </div>
     </div>
-  <nav class="ydob">
-  <div class="container">
-    <header>
-      <div id="textone"><h1>Baixe Aqui</h1><div>
-    </header>
-    <main>
-      <label for="videoUrl">URL do Vídeo:</label>
-      <input type="text" id="l" placeholder="Insira a URL do vídeo">
-      <button type="button" onclick="download()">Download</button>
-    </main>
-  </div>
-</nav>
-        <script>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <h1>olá essa pagina  falara um pouco de nos</h1>
+    <div id=""><h1>
+    </h1></div>
+    <div id=""><h1>
+        nossos nomes são
+    </h1></div>
+        <p>Pedro Lael Pacheco Pires</p>
+        <p>Gustavo Alves De Morais</p>
+        <p>Luis Guilherme</p>
+        <div id=""><h1>
+            nós somos cursantes do curso Técnicos  
+        </h1></div>
+        <div id=""><h1>
+            temos aula com os professores
+        </h1></div>
+        <p>
+            Fernado Marques
+        </p>
+        <p>Leandro Valk</p>
+    </div>
+</body>
+<script>
     var header           = document.getElementById('header');
     var navigationHeader = document.getElementById('navigation_header');
     var content          = document.getElementById('content');
@@ -163,6 +174,4 @@
     });
 
 </script>
-  <script src="script.js"></script>
-</body>
 </html>
