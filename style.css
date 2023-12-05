@@ -20,7 +20,6 @@
         .img_logo_header{
             width: 45px;
         }
-        .header,
         .navigation_header{
             display: flex;
             flex-direction: row;
@@ -28,7 +27,7 @@
             font-size:  12px;
         }
         .header{
-            background-color: var(--color-dark2);
+            /*não colocar cor*/
             justify-content: space-between;
             padding: 0 10%;
             height: 3.5em;
