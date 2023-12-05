@@ -6,7 +6,7 @@
             --color-dark3: #414141;
             --color-dark4: #1c1c1c;
             --color-dark5: #343434;
-            --color-purple: #b040ff;
+            --color-pink:  #ff809c;
         }
         *{
             margin: 0;
@@ -27,7 +27,6 @@
             align-items: center;
         }
         .header{
-            background-color: var(--color-dark2);
             justify-content: space-between;
             padding: 0 10%;
             height: 3.5em;
@@ -45,7 +44,7 @@
         }
         .navigation_header a{
             text-decoration: none;
-            color: var(--color-purple);
+            color: var(--color-pink);
             transition: 1s;
             font-weight: bold;
         }
