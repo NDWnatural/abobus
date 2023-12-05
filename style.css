@@ -1,4 +1,4 @@
-//barra de nave//
+/*barra de nave*/
         :root{
             --color-white: #fff;
             --color-dark1: rgb(39, 39, 39);
@@ -84,7 +84,7 @@
             from {margin-left: -100vw;}
             to {margin-left: -10vw;}
         }
-//finalizado//
+/*finalizado*/
 #textone{
     text-align: center;
 }
