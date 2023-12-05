@@ -51,11 +51,6 @@
         .navigation_header a:hover{
             color: var(--color-pink);
         }
-        .active{
-            background: var(--color-dark3);
-            padding: 10px;
-            border-radius: 10px;
-        }
         .btn_icon_header{
             background: transparent;
             border: none;
