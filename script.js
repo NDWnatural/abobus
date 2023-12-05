@@ -1,19 +1,19 @@
 function download() {
-    const apiUrl = 'https://abobus-snowy.vercel.app/';
-    const videoUrl = document.getElementById('l').value;
+  const apiUrl = 'https://abobus-snowy.vercel.app';
+  const videoUrl = document.getElementById('videoUrl').value;
 
-    if (!videoUrl) {
-        alert('Por favor, insira a URL do vídeo.');
-        return;
-    }
+  if (!videoUrl) {
+      alert('Por favor, insira a URL do vídeo.');
+      return;
+  }
 
-    fetch(apiUrl, {
+  fetch(apiUrl, {
     method: 'POST',
     headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ videoUrl }),
-})
+  })
 
     .then(response => {
         if (!response.ok) {
@@ -32,9 +32,9 @@ function download() {
         window.URL.revokeObjectURL(url);
     })
     .catch(error => {
-        console.error(error);
-        alert('Erro ao processar o download.');
-    });
+    console.error(error);
+    alert('Erro ao processar o download.');
+  });
 }
 //segundo java//
 
