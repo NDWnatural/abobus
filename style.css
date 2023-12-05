@@ -28,6 +28,7 @@
             font-size:  12px;
         }
         .header{
+            background-color: var(--color-dark2);
             justify-content: space-between;
             padding: 0 10%;
             height: 3.5em;
@@ -46,7 +47,7 @@
         .navigation_header a{
             text-decoration: none;
             color: var(--color-white);
-            transition: 1s;
+            transition: 0.6s;
         }
         .navigation_header a:hover{
             color: var(--color-pink);
