@@ -44,12 +44,12 @@
         }
         .navigation_header a{
             text-decoration: none;
-            color: var(--color-pink);
+            color: var(--color-white);
             transition: 1s;
             font-weight: bold;
         }
         .navigation_header a:hover{
-            color: var(--color-white);
+            color: var(--color-pink);
         }
         .active{
             background: var(--color-dark3);
@@ -68,7 +68,7 @@
                 position: absolute;
                 flex-direction: column !important;
                 top: 0;
-                background: var(--color-dark5);
+                background: var(--color-pink);
                 height: 100%;
                 width: 35vw;
                 padding: 1em;
