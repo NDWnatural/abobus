@@ -13,22 +13,7 @@ app.options('/', cors());  // Adicione esta linha para OPTIONS
 
 app.post('/', async (req, res) => {
   try {
-    const videoUrl = req.body.videoUrl;
-
-    if (!videoUrl) {
-      throw new Error('URL do vídeo não fornecida.');
-    }
-
-    if (!ytdl.validateURL(videoUrl)) {
-      throw new Error('URL do vídeo inválida.');
-    }
-
-    const info = await ytdl.getInfo(videoUrl);
-    const audioFormat = ytdl.chooseFormat(info.formats, { quality: 'highestaudio' });
-
-    res.header('Content-Disposition', `attachment; filename="${info.title}.mp3"`);
-    ytdl(videoUrl, { format: audioFormat })
-      .pipe(res);
+    // Lógica do seu endpoint POST
   } catch (error) {
     console.error(error);
     res.status(500).send('Erro ao processar o download.');
