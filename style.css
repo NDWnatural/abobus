@@ -72,7 +72,11 @@
                 margin-left: -100vw;
             }
             .btn_icon_header{
-                display: block;
+                  background: transparent;
+                  border: none;
+                  color: var(--color-white);
+                  cursor: pointer;
+                  display: none;
             }
         }
         @keyframes showSidebar {
