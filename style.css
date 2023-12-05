@@ -20,6 +20,7 @@
         .img_logo_header{
             width: 45px;
         }
+        .header,
         .navigation_header{
             display: flex;
             flex-direction: row;
@@ -27,7 +28,6 @@
             font-size:  12px;
         }
         .header{
-            /*não colocar cor*/
             justify-content: space-between;
             padding: 0 10%;
             height: 3.5em;
@@ -46,6 +46,7 @@
         .navigation_header a{
             text-decoration: none;
             color: var(--color-white);
+            transition: 1s;
             transition: 0.6s;
         }
         .navigation_header a:hover{
@@ -129,7 +130,6 @@ button:hover {
 }
 #l:hover {
     padding: 8px;
-
 }
 .elementos{
     list-style-type: none;
