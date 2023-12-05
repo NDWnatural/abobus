@@ -46,7 +46,6 @@
             text-decoration: none;
             color: var(--color-white);
             transition: 1s;
-            font-weight: bold;
         }
         .navigation_header a:hover{
             color: var(--color-pink);
