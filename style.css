@@ -50,7 +50,7 @@
             transition: 0.6s;
         }
         .navigation_header a:hover{
-            color: var(--color-pink);
+            
         }
         .btn_icon_header{
             background: transparent;
