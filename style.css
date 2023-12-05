@@ -57,14 +57,14 @@
             border: none;
             color: var(--color-white);
             cursor: pointer;
-            display: block;
+            display: none;
         }
         @media screen and (max-width: 768px) {
             .navigation_header{
                 position: absolute;
                 flex-direction: column !important;
                 top: 0;
-                background: var(--color-pink);
+                background: var(--color-dark5);
                 height: 100%;
                 width: 35vw;
                 padding: 1em;
@@ -72,11 +72,7 @@
                 margin-left: -100vw;
             }
             .btn_icon_header{
-                  background: transparent;
-                  border: none;
-                  color: var(--color-white);
-                  cursor: pointer;
-                  display: none;
+                display: block;
             }
         }
         @keyframes showSidebar {
