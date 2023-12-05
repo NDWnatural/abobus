@@ -1,19 +1,19 @@
 /*barra de nave*/
         :root{
             --color-white: #fff;
-            --color-dark1: rgb(39, 39, 39);
+            --color-dark1: #272727;
             --color-dark2: #2d2d2d;
             --color-dark3: #414141;
             --color-dark4: #1c1c1c;
             --color-dark5: #343434;
-            --color-pink:  #ff809c;
+            --color-pink:  #ff809c; 
         }
         *{
             margin: 0;
             padding: 0;
         }
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--color-dark1);
             color: var(--color-white);
         }
@@ -28,6 +28,7 @@
             font-size:  12px;
         }
         .header{
+            background-color: var(--color-dark2);
             justify-content: space-between;
             padding: 0 10%;
             height: 3.5em;
@@ -38,19 +39,19 @@
             z-index: 2;
         }
         .content{
+            color: var(--color-pink);
             padding-top: 5em;
             text-align: center;
             height: 100vh;
-            transition: 1s;
+            transition: 0.6s;
         }
         .navigation_header a{
             text-decoration: none;
             color: var(--color-white);
-            transition: 1s;
             transition: 0.6s;
         }
         .navigation_header a:hover{
-            
+            color: var(--color-pink);
         }
         .btn_icon_header{
             background: transparent;
